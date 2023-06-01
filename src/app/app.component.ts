@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SearchService } from './services/search/search.service';
 
 @Component({
   selector: 'app-root',
@@ -6,19 +7,28 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  constructor(private service: SearchService){ }
+
   title = 'github-search';
 
-  userList = [
-    {
-      'name': 'Lucas Fidelis',
-      'email': 'fidelis.lucas@gmail.com',
-      'login': 'luscafidelis',
-      'photo': 'https://avatars.githubusercontent.com/u/52222260?v=4'
-    }
-  ];
+  //Verifica se já ocorreu a busca
+  search = false;
+
+  searchUser(query: string){
+    //Atualizando o estado da busca
+    this.search = true;
+    
+    //realizando busca
+    this.service.searchUsers(query)
+      .subscribe((users:any) => this.userList = users.items);
+  }
+
+  //lista de usuários encontrados
+  userList: any = [];
 
   deleteUser(target: any){
-    this.userList = this.userList.filter(user => user !== target);
+    this.userList = this.userList.filter((user: any) => user !== target);
    }
 
 }

@@ -7,6 +7,11 @@
 .profile-preview{
     padding: 10px 10px;
 }
+.profile-preview a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: lighter;
+}
 
 .profile-preview h3, .profile-preview p{
     margin: 0;
