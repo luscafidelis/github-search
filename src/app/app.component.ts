@@ -17,4 +17,8 @@ export class AppComponent {
     }
   ];
 
+  deleteUser(target: any){
+    this.userList = this.userList.filter(user => user !== target);
+   }
+
 }

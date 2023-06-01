@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { faEye, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -11,5 +11,10 @@ export class ProfileComponent {
   faTrash = faTrashAlt;
   isCollapsed = true;
 
-  @Input() user:any;
+  @Input() user : any;
+  @Output() deleteRequest = new EventEmitter<any>();
+
+    delete(user:any){
+        this.deleteRequest.emit(user)
+    }
 }
