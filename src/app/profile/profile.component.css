@@ -5,7 +5,11 @@
 }
 
 .profile-preview{
-    padding: 10px 15px;
+    padding: 10px 10px;
+}
+
+.profile-preview h3, .profile-preview p{
+    margin: 0;
 }
 
 .profile-expanded{

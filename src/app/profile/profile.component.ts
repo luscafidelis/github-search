@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { faEye } from '@fortawesome/free-solid-svg-icons';
+import { Component, Input } from '@angular/core';
+import { faEye, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-profile',
@@ -8,5 +8,8 @@ import { faEye } from '@fortawesome/free-solid-svg-icons';
 })
 export class ProfileComponent {
   faEye = faEye
+  faTrash = faTrashAlt;
   isCollapsed = true;
+
+  @Input() user:any;
 }

@@ -1,10 +1,31 @@
 <div class="container-fluid profile-wrapper">
     <div class="row align-items-center profile-preview">
-        <div class="col-2">foto</div>
-        <div class="col-9">info</div>
-        <div class="col">
+        <div class="col-2 col-sm-1 gx-0">
+            <img class="img-fluid rounded" src="{{user.photo}}" alt="Foto de {{user.name}}">
+        </div>
+        <div class=" col-7 col-sm-9">
+            <div class="row align-items-center">
+                <div class="col-auto">
+                    <h3>{{user.name}}</h3>
+                </div>
+                <div class="col d-none d-sm-block">
+                    <p>{{user.location}}</p>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col">
+                    <p>{{user.email}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-1">
             <button class="btn text-white" (click)="isCollapsed = ! isCollapsed">
                 <fa-icon [icon]="faEye"></fa-icon>
+            </button>
+        </div>
+        <div class="col-1">
+            <button class="btn text-white">
+                <fa-icon [icon]="faTrash"></fa-icon>
             </button>
         </div>
     </div>
