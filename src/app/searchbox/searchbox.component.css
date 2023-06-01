@@ -1,0 +1,7 @@
+.search-form{
+    margin: 30px 20px;
+}
+.search-btn{
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
