@@ -4,13 +4,14 @@
       <app-heading></app-heading>
     </div>
     <div class="row justify-content-center">
-      <div class="col-10">
+      <div class="col-md-10">
         <app-searchbox></app-searchbox>
       </div>
     </div>
-    <div class="row justify-content-center">
-      <div class="col-10">
-        <app-profile></app-profile>
+    <div class="row justify-content-center" *ngIf="userList.length>0">
+      <div class="col-md-10">
+        <h2>resultados</h2>
+        <app-profile *ngFor="let user of userList" [user]="user" (deleteRequest)="deleteUser(user)"></app-profile>
       </div>
     </div>
   </div>  

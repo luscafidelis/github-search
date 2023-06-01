@@ -1,0 +1,29 @@
+.profile-wrapper{
+    border-radius: 9px;
+    background: #3D2290;
+    margin: 10px 0;
+}
+
+.profile-preview{
+    padding: 10px 10px;
+}
+
+.profile-preview h3, .profile-preview p{
+    margin: 0;
+}
+
+.profile-expanded{
+    padding: 0;
+}
+
+.profile-info{
+    padding: 10px 15px 20px;
+}
+
+.profile-map{
+    height: 200px;
+    padding: 0;
+    background: pink;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+}
