@@ -1,1 +1,21 @@
-<p>profile works!</p>
+<div class="container-fluid profile-wrapper">
+    <div class="row align-items-center profile-preview">
+        <div class="col-2">foto</div>
+        <div class="col-9">info</div>
+        <div class="col">
+            <button class="btn text-white" (click)="isCollapsed = ! isCollapsed">
+                <fa-icon [icon]="faEye"></fa-icon>
+            </button>
+        </div>
+    </div>
+    <div [(ngbCollapse)]="isCollapsed" class="container-fluid profile-expanded">
+        <div class="row profile-info align-items-center">
+            <div class="col">
+                info
+            </div>
+        </div>
+        <div class="row profile-map">
+            mapa
+        </div>
+    </div>
+</div>

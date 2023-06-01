@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faEye } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-profile',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent {
-
+  faEye = faEye
+  isCollapsed = true;
 }
