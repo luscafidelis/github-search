@@ -12,7 +12,7 @@ export class AppComponent {
     {
       'name': 'Lucas Fidelis',
       'email': 'fidelis.lucas@gmail.com',
-      'location': 'São Carlos - Brazil',
+      'login': 'luscafidelis',
       'photo': 'https://avatars.githubusercontent.com/u/52222260?v=4'
     }
   ];
