@@ -5,11 +5,12 @@
     </div>
     <div class="row justify-content-center">
       <div class="col-md-10">
-        <app-searchbox></app-searchbox>
+        <app-searchbox (searchRequest)="searchUser($event)"></app-searchbox>
       </div>
     </div>
-    <div class="row justify-content-center" *ngIf="userList.length>0">
-      <div class="col-md-10">
+    <div class="row justify-content-center" *ngIf="search">
+      <h2 class="text-center" *ngIf="userList.length==0">sua busca não obteve resultados</h2>
+      <div class="col-md-10" *ngIf="userList.length>0">
         <h2>resultados</h2>
         <app-profile *ngFor="let user of userList" [user]="user" (deleteRequest)="deleteUser(user)"></app-profile>
       </div>

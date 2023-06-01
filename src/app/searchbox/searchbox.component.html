@@ -1,8 +1,8 @@
 <form action="/search" class="search-form">
     <div class="input-group mb-2">
-        <input type="text" name="user" id="search-input" class="form-control" placeholder="quem esta procurando?">
+        <input type="text" name="user" id="search-input" class="form-control" #query placeholder="informe o nome do desenvolvedor">
         <div class="input-group-append">
-            <button type="submit" class="btn btn-light search-btn">
+            <button class="btn btn-light search-btn" (click)="search(query.value)">
                 <fa-icon [icon]="faSearch"></fa-icon>
             </button>
         </div>
