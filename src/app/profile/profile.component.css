@@ -22,13 +22,14 @@
 }
 
 .profile-info{
-    padding: 10px 15px 20px;
+    padding: 10px 10px 20px;
 }
 
 .profile-map{
     height: 200px;
     padding: 0;
-    background: pink;
-    border-bottom-left-radius: 9px;
-    border-bottom-right-radius: 9px;
+}
+
+app-map{
+    padding:0;
 }

@@ -10,13 +10,16 @@ import { ProfileComponent } from './profile/profile.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SearchService } from './services/search/search.service';
+import { FindService } from './services/find/find.service';
+import { MapComponent } from './map/map.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeadingComponent,
     SearchboxComponent,
-    ProfileComponent
+    ProfileComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,7 @@ import { SearchService } from './services/search/search.service';
     HttpClientModule,
     FormsModule
   ],
-  providers: [SearchService],
+  providers: [SearchService, FindService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

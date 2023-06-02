@@ -14,4 +14,8 @@ export class SearchService {
   searchUsers(query:string){
     return this.http.get(this.API+'/search/users?q='+query+'&per_page='+this.LIMIT)
   }
+
+  getUser(query:string){
+    return this.http.get(this.API+'/users/'+query)
+  }
 }
