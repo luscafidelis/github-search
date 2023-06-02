@@ -16,7 +16,7 @@
             </div>
         </div>
         <div class="col-1">
-            <button class="btn text-white" (click)="isCollapsed = ! isCollapsed">
+            <button class="btn text-white" (click)="showUserInfo()">
                 <fa-icon [icon]="faEye"></fa-icon>
             </button>
         </div>
@@ -27,13 +27,18 @@
         </div>
     </div>
     <div [(ngbCollapse)]="isCollapsed" class="container-fluid profile-expanded">
-        <div class="row profile-info align-items-center">
-            <div class="col">
-                info
+        <div class="row profile-info">
+            <div class="col-7 gx-0">
+                <h4>Bio:</h4>
+                <p>{{user.bio || 'O usuário não forneceu uma bio.'}}</p>
+            </div>
+            <div class="col-4 gx-0">
+                <h4>Local:</h4>
+                <span><fa-icon [icon]="faMapMarker"></fa-icon>  {{user.location}}</span>
             </div>
         </div>
         <div class="row profile-map">
-            mapa
+            <app-map *ngIf="!isCollapsed" [user]="user"></app-map>
         </div>
     </div>
 </div>

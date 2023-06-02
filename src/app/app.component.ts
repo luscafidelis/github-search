@@ -12,9 +12,13 @@ export class AppComponent {
 
   title = 'github-search';
 
+  //lista de usuários
+  userList: any = [];
+
   //Verifica se já ocorreu a busca
   search = false;
 
+  //realiza busca por usuários
   searchUser(query: string){
     //Atualizando o estado da busca
     this.search = true;
@@ -23,9 +27,6 @@ export class AppComponent {
     this.service.searchUsers(query)
       .subscribe((users:any) => this.userList = users.items);
   }
-
-  //lista de usuários encontrados
-  userList: any = [];
 
   deleteUser(target: any){
     this.userList = this.userList.filter((user: any) => user !== target);
