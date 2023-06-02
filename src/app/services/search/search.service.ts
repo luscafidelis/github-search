@@ -7,7 +7,7 @@ export class SearchService {
   private readonly API = 'https://api.github.com';
 
   //Limite de resultados
-  private readonly LIMIT = '10';
+  private readonly LIMIT = '5';
   
   constructor(private http: HttpClient) { }
 
